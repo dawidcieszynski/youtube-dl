@@ -19,12 +19,12 @@ class TVPIE(InfoExtractor):
 
     _TESTS = [{
         'url': 'https://vod.tvp.pl/video/czas-honoru,i-seria-odc-13,194536',
-        'md5': '8aa518c15e5cc32dfe8db400dc921fbb',
+        'md5': 'a21eb0aa862f25414430f15fdfb9e76c',
         'info_dict': {
             'id': '194536',
             'ext': 'mp4',
-            'title': 'Czas honoru, I seria – odc. 13',
-            'description': 'md5:381afa5bca72655fe94b05cfe82bf53d',
+            'title': u'Czas honoru, odc. 13 \u2013 W\u0142adek',
+            'description': 'md5:437f48b93558370b031740546b696e24',
         },
     }, {
         'url': 'http://www.tvp.pl/there-can-be-anything-so-i-shortened-it/17916176',
