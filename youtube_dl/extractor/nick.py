@@ -243,3 +243,22 @@ class NickRuIE(MTVServicesInfoExtractor):
         webpage = self._download_webpage(url, video_id)
         mgid = self._extract_mgid(webpage)
         return self.url_result('http://media.mtvnservices.com/embed/%s' % mgid)
+
+class NickPlIE(NickBrIE):
+    IE_NAME = 'nickelodeon:pl'
+    _VALID_URL = r'''(?x)
+                    https?://
+                        (?:
+                            (?P<domain>(?:www\.)?nickjr|mundonick\.uol)\.com\.pl|
+                            (?:www\.)?nickjr\.[a-z]{2}
+                        )
+                        /(?:programas/)?[^/]+/wideo/(?:episodios/)?(?P<id>[^/?\#.]+)
+                    '''
+    _TESTS = [{
+        'url': 'http://www.nickjr.com.pl/shimmer-i-shine/wideo/przygoda-w-lesie-latajaca-maka/',
+        'only_matching': True,
+    }, {
+        'url': 'http://www.nickjr.com.pl/shimmer-i-shine/wideo/graj-dalej/',
+        'only_matching': True,
+    }]
+
